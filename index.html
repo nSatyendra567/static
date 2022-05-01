@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="jscript"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <title>static</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img class="logoimg" src="logo.svg" alt="">
+                
+            </div>
+            
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            
+            <div class="navitems navitems " id="navLinks">
+            
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <a href="#features" class="hide">Feature</a>
+                <a href="#features" class="hide">Pricing</a>
+                <a href="#features" class="hide">Marketplace</a>
+                <a href="#features" class="hide">Company</a>
+                <a href="#features" class="hide">Log in</a>
+
+                
+            
+            </div>
+
+            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i> -->
+
+            
+
+            
+            
+            
+        </div>
+    </nav>
+
+    <section>
+
+        <div class="mainsection">
+            <div class="info width50">
+                <div class="company">
+                    <div class="heading">
+                        <h1 class="hii">
+                            Data to enrich your
+                            
+                        </h1>
+                        <h1 class="business">
+                            online business
+                        </h1>
+                    </div>
+                    <div class="sentence">
+                        <p>
+                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                        </p>
+                    </div>
+                    <div class="btnbox">
+                        <button class="btn1 mainbtn">Get started</button>
+                        <button class="btn2 mainbtn">Live demo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="imgsection width50">
+                <div class="imgdiv">
+                    <img class="imginsection" src="img1.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <main>
+        <div id="features" class="arive">
+            <div class="transition  active">
+                <div class="first">
+                    <h1>Trusted by developers from over 80 planets
+                    </h1>
+                </div>
+    
+                <div class="second">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, aliquam. Corrupti fugit excepturi consectetur iure iste dolores neque tempore eveniet?
+                </div>
+    
+                <div class="third">
+    
+                    <div class="flex bas">
+                        <div>
+                             
+                            <div class="flex test1">
+                                <h1 class="blue num block test11" data-val="99">00</h1>
+                                 
+                                 <h1 class="blue inline test111">%</h1>
+                            </div>
+                            <p>Runtime</p>
+                        </div>
+        
+                        <div class="test2" >
+                            <div class="flex">
+                                <h1 class="blue num block test22" data-val="47">00</h1> <h1 class="blue inline test222">%</h1>
+                            </div>
+                            <p>Less Data</p>
+                        </div>
+        
+                        <div class="test">
+                            <div class="flex">
+                                <h1 class="blue num block" data-val="10">00</h1>  <h1 class="blue inline">K+</h1>
+                            </div>
+                            <p>Customers</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <h1 class="thank">thank you</h1>
+
+
+
+    <script>
+        //common reveal options to create reveal animations
+        ScrollReveal({
+          //reset: true,
+          distance: '60px',
+          duration: 2500,
+          delay: 400
+        });
+  
+        //target elements, and specify options to create reveal animations
+        
+        ScrollReveal().reveal('.arive', { delay: 600, origin: 'bottom' });
+        
+       
+      </script>
+
+      <script>
+          let valueDisplays = document.querySelectorAll(".num");
+          let interval = 5000;
+          valueDisplays.forEach((valueDisplay) => {
+          let startValue = 0;
+          let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+          let duration = Math.floor(interval / endValue);
+          let counter = setInterval(function () {
+          startValue += 1;
+          valueDisplay.textContent = startValue;
+          if (startValue == endValue) 
+          {
+           clearInterval(counter);
+          }
+          }, duration);
+          });
+      </script>
+
+<!-- <script>
+    function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+    x.style.display = "none";
+    } else {
+     x.style.display = "block";
+    }
+    }
+</script> -->
+
+<script>
+    var navlinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.left =" 163px"
+  
+    }
+
+    function hideMenu(){
+        navLinks.style.left ="538px"
+    }
+</script>
+
+      <!-- <script>
+         var naLlinks = document.getElementById("navLinks")
+         function showMenu(){
+        navLinks.style.right ="251px"
+         }
+
+         function hideMenu(){
+        navLinks.style.right ="501px"
+         }
+      </script> -->
+
+</body>
+</html>
